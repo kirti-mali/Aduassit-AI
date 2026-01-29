@@ -1,30 +1,40 @@
 {
-  "name": "aduassit-ai",
+  "name": "aduassist-ai",
   "version": "1.0.0",
   "description": "AI-powered chatbot for academic improvement in schools and colleges",
-  "main": "server.js",
+  "main": "index.html",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "build": "npm run build:client",
-    "build:client": "cd client && npm run build"
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "test": "echo \"Open test.html in browser\" && exit 0"
   },
-  "keywords": ["ai", "chatbot", "education", "academic", "learning"],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kirti-mali/Aduassit-AI.git"
+  },
+  "keywords": [
+    "ai",
+    "chatbot",
+    "education",
+    "academic",
+    "learning",
+    "student",
+    "study",
+    "homework",
+    "tutor",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Kirti Mali",
   "license": "MIT",
-  "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "openai": "^4.20.1",
-    "socket.io": "^4.7.2",
-    "mongoose": "^7.5.0",
-    "bcryptjs": "^2.4.3",
-    "jsonwebtoken": "^9.0.2",
-    "helmet": "^7.0.0",
-    "express-rate-limit": "^6.10.0"
+  "bugs": {
+    "url": "https://github.com/kirti-mali/Aduassit-AI/issues"
   },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
+  "homepage": "https://kirti-mali.github.io/Aduassit-AI/",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
