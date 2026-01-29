@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AduAssist AI - Academic Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>AduAssist AI</h1>
+            </div>
+            <div class="user-info">
+                <span id="userGreeting">Welcome, Student!</span>
+                <button id="settingsBtn" class="settings-btn">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Chat Interface -->
+        <main class="chat-container">
+            <!-- Subject Selection -->
+            <div class="subject-panel">
+                <h3>Select Subject</h3>
+                <div class="subject-buttons">
+                    <button class="subject-btn active" data-subject="general">General</button>
+                    <button class="subject-btn" data-subject="math">Mathematics</button>
+                    <button class="subject-btn" data-subject="science">Science</button>
+                    <button class="subject-btn" data-subject="english">English</button>
+                    <button class="subject-btn" data-subject="history">History</button>
+                    <button class="subject-btn" data-subject="programming">Programming</button>
+                </div>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hello! I'm AduAssist AI, your academic companion. I'm here to help you with:</p>
+                        <ul>
+                            <li>📚 Subject explanations and concepts</li>
+                            <li>📝 Homework assistance</li>
+                            <li>🧮 Problem solving</li>
+                            <li>📖 Study tips and techniques</li>
+                            <li>🎯 Exam preparation</li>
+                        </ul>
+                        <p>What would you like to learn today?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="quick-btn" data-action="explain">Explain Concept</button>
+                <button class="quick-btn" data-action="solve">Solve Problem</button>
+                <button class="quick-btn" data-action="study">Study Tips</button>
+                <button class="quick-btn" data-action="quiz">Quick Quiz</button>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-container">
+                    <input type="text" id="messageInput" placeholder="Ask me anything about your studies..." maxlength="500">
+                    <button id="sendBtn" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="input-tools">
+                    <button id="voiceBtn" class="tool-btn" title="Voice Input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <button id="attachBtn" class="tool-btn" title="Attach File">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <span class="char-count">0/500</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Settings Modal -->
+        <div id="settingsModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Settings</h2>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="setting-group">
+                        <label for="userName">Your Name:</label>
+                        <input type="text" id="userName" placeholder="Enter your name">
+                    </div>
+                    <div class="setting-group">
+                        <label for="gradeLevel">Grade Level:</label>
+                        <select id="gradeLevel">
+                            <option value="elementary">Elementary</option>
+                            <option value="middle">Middle School</option>
+                            <option value="high">High School</option>
+                            <option value="college">College</option>
+                        </select>
+                    </div>
+                    <div class="setting-group">
+                        <label for="learningStyle">Learning Style:</label>
+                        <select id="learningStyle">
+                            <option value="visual">Visual</option>
+                            <option value="auditory">Auditory</option>
+                            <option value="kinesthetic">Kinesthetic</option>
+                            <option value="mixed">Mixed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="saveSettings" class="btn-primary">Save Settings</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
